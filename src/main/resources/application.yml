@@ -1,1 +1,28 @@
-spring:  liquibase:    enabled: true  jpa:    hibernate:      show-sql: true      ddl-auto: validate  datasource:    url: jdbc:postgresql://localhost:5432/test_securrity_java    username: postgres    password: 1234    driverClassName: org.postgresql.Driver  main:    allow-circular-references: true    allow-bean-definition-overriding: truelogging:  level:    org:      hibernate:        SQL: DEBUG        orm:          jdbc:            bind: TRACEjwt:    secret: bh4b32hj4bjh23    lifetime: 10m
+spring:
+  liquibase:
+    enabled: true
+  jpa:
+    hibernate:
+      show-sql: true
+      ddl-auto: validate
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test_securrity_java
+    username: postgres
+    password: 1234
+    driverClassName: org.postgresql.Driver
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        orm:
+          jdbc:
+            bind: TRACE
+
+jwt:
+    secret: bh4b32hj4bjh23
+    lifetime: 10m
